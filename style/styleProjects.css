@@ -16,6 +16,11 @@ html, body {
     src: url(../fonts/hypik/hypik.otf); 
   }
 
+  @font-face {
+        font-family: projText;
+        src: url(../fonts/CascadiaMono/CaskaydiaMonoNerdFontMono-Regular.ttf);
+    }
+
   .titleTopProjects { 
     position: relative;
     text-align: center;
@@ -51,6 +56,7 @@ html, body {
     color: white;
     white-space: nowrap;
     text-decoration: none;
+    font-family: projText;
 
   }  
 
@@ -64,6 +70,7 @@ html, body {
     height: auto;
     text-align: center;
     margin-top: 5px;
+    font-family: projText;
     
   }
   
