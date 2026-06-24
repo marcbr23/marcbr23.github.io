@@ -1,0 +1,140 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden; 
+      background-image: url(../imgs/projectsBG.jpg);
+      background-color: rgba(0, 0, 0, 0.9);
+      background-blend-mode: multiply;
+      background-size: cover;
+    }
+
+
+  @font-face {
+    font-family: fontTitleTopProj; 
+    src: url(../fonts/hypik/hypik.otf); 
+  }
+
+  .titleTopProjects { 
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 40px;
+    color: white;
+    font-family: fontTitleTopProj;
+  }
+
+  .returnButton {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    transform: translate(-50%, -50%);
+    height: 25px;
+    width: 110px;
+    border-radius: 5px;
+    background-color: rgb(67, 14, 25);
+    transition: background-color 0.5s ease;
+    z-index: 10;
+  }
+
+  .returnButton:hover {
+    background-color: crimson;
+  }
+
+  .returnButtonText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    white-space: nowrap;
+    text-decoration: none;
+
+  }  
+
+  .divProjects {
+    display: flex; 
+    flex-direction: row;
+    position: relative;
+    padding: 5%;
+    gap: 40px;
+    color: white;
+    height: auto;
+    text-align: center;
+    margin-top: 5px;
+    
+  }
+  
+  .IMG2026 {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    height: 30%;
+    width: 90%;
+    background-size: cover;
+    background-image: url(../imgs/deskDock.png);
+    border-radius: 7px;
+    border: 3px solid crimson;
+  } 
+
+  .projectsIMG {
+    background-image: url(../imgs/projectsNow.jpeg);
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    height: 85%;
+    width: 26.1%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 7px;
+    border: 3px solid crimson;
+    opacity: 0.6;    
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    
+    html, body {
+      font-size: small;
+      overflow-y: auto; 
+      }
+    
+    .divProjects {
+      flex-direction: column;
+      transform: none;
+      height: auto;       
+      padding-top: 15%;
+      gap: 5px;
+    }
+
+    .projectsIMG, .returnButton, .returnButtonText {
+      display: none;
+    }
+
+    .IMG2026 {
+      width: 60%;
+      height: 150px;
+      background-position: center;
+      
+    }
+
+    .tt8 {
+      margin-top: 60px;
+    }
+
+  }
+
+  @media (max-width: 1070px) {
+
+    .projectsIMG {
+      display: none;
+    }
+
+  }

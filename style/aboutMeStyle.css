@@ -1,0 +1,118 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      overflow-x: hidden;
+      flex-direction: column;
+      align-items: center; 
+      background-image: url(../imgs/aboutMeBG.jpg);
+      background-size: cover;
+
+
+    }
+
+
+    @font-face {
+    font-family: fontTitleTop;
+    src: url(../fonts/moderniz/Moderniz.otf);
+    }
+
+    @font-face {
+        font-family: aboutMeText;
+        src: url(../fonts/CascadiaMono/CaskaydiaMonoNerdFontMono-Regular.ttf);
+    }
+
+    .titleTopAM {
+        position: relative;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        font-size: 40px;
+        color: white;
+        font-family: fontTitleTop;
+    }
+
+    .aboutMeText {
+        display: flex; 
+        flex-direction: column;
+        position: relative;
+        padding: 5%;
+        gap: 40px;
+        color: white;
+        height: auto;
+        align-items: center;
+        text-align: center;
+        margin-top: 5px;
+        max-width: 60%;
+    }
+
+    .skillsAndCerts {
+        display: flex;
+        grid-template-columns: 30% 40% 30%;
+        grid-gap: 40px;
+        padding: 10px;
+        padding-top: 5px;
+        box-sizing: border-box;
+        font-family: aboutMeText;
+        white-space: nowrap;
+    }
+
+    .returnButton {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        height: 25px;
+        width: 110px;
+        border-radius: 5px;
+        background-color: rgb(67, 14, 25);
+        transition: background-color 0.5s ease;
+    }
+
+  
+
+    .returnButtonText {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+       color: white;
+        white-space: nowrap;
+        text-decoration: none;
+
+    }
+
+    .returnButton:hover {
+        background-color: crimson;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+@media (max-width: 650px) {
+
+  body, .skillsAndCerts {
+    flex-direction: column;
+    text-align: center;
+    background-position: 40%;
+    max-width: none;
+  }
+
+  .titleTopAM {
+    white-space: nowrap;
+    font-size: x-large;
+  }
+
+  .returnButton, .returnButtonText {
+    display: none;
+  }
+
+}

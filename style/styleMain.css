@@ -1,0 +1,151 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden; 
+    }
+
+    body {
+      display: flex; 
+      position: relative; 
+    }
+
+    @font-face {
+        font-family: fontTopTitle;
+        src: url(../fonts/old_stamper/old_stamper.ttf);
+    }
+
+    @font-face {
+      font-family: fontLeftTitle; 
+      src: url(../fonts/hypik/hypik.otf); 
+    }
+
+    @font-face {
+        font-family: fontRightTitle;
+        src: url(../fonts/moderniz/Moderniz.otf);
+    }
+
+
+    @font-face {
+        font-family: hoverText;
+        src: url(../fonts/CascadiaMono/CaskaydiaMonoNerdFontMono-Regular.ttf);
+    }
+
+    .titletop {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 1%;
+      left: 50%;    
+      z-index: 10;  
+      color: gold;
+      font-family: fontTopTitle;
+      font-size: 30px;
+    }
+    
+    .hoverToDiscover {
+      position: absolute;
+      top: 7%;
+      text-align: center;
+      width: 100%;
+      color: white;
+      z-index: 10;
+      font-family: hoverText;
+    }
+
+    .bgleft {
+      background-color: black;  
+      height: 100%;
+      width: 50%;
+      position: relative; 
+      overflow: hidden;
+    }
+
+    .bgright {
+      background-color: gray;  
+      height: 100%;
+      width: 50%; 
+      position: relative; 
+      overflow: hidden;
+    }
+
+    .bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      opacity: 0;       
+      transition: opacity 0.5s ease;
+    }
+
+    .titles {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        color: crimson;
+        opacity: 0;
+        transition: color 0.5s ease, opacity 0.5s ease;
+        font-size: 50px;
+        text-decoration: none;
+    }    
+
+    .titles:hover {
+      color: gold;
+    }
+
+    .bgleft:hover .bg-image,  
+    .bgright:hover .bg-image {
+      opacity: 0.25; 
+    }
+    .bgleft:hover .titles {
+      opacity: 1; 
+    }
+    .bgright:hover .titles {
+      opacity: 1; 
+    }
+
+@media (max-width: 650px) {
+
+  body {
+    flex-direction: column;
+  }
+
+  .bgleft, .bgright {
+      width: 100%;
+ 
+  }
+
+  .hoverToDiscover {
+    display: none;
+  }
+
+  .titletop {
+    top: 5%;
+    font-size: 22px;
+    white-space: nowrap;
+  }
+
+  .titles {
+    font-size: x-small;
+    white-space: nowrap;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    opacity: 1;
+  }
+
+  .bg-image {
+    opacity: 0.25;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+    
